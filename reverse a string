@@ -1,0 +1,16 @@
+//Javascript
+function reverseString(str) {
+  //Make an array, split all characters in the string and put them in the array.
+  var array = [];
+  array = str.split('');
+  //Reverse the array
+  var newArray = [];
+  newArray = array.reverse();
+  //Put back the characters in the array to a new string
+  var reversedStr = '';
+  reversedStr = newArray.join('');
+  
+  return reversedStr;
+}
+
+reverseString("Greetings from Earth");
