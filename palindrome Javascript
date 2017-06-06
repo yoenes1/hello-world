@@ -1,0 +1,13 @@
+function palindrome(str) {
+  // replace all non-alphanumeric characters in str with ''.
+  var nonAlpha = /[\W_]/g;
+  // and turn string to lowercase.
+  var newStr = str.toLowerCase().replace(nonAlpha,'');
+  //reverse string.
+  var reverseStr = newStr.split('').reverse().join('');
+  
+  //return true if newStr === reverseStr
+  return newStr === reverseStr;
+}
+
+palindrome("not a palindrome");
