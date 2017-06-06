@@ -1,0 +1,14 @@
+  function titleCase(str) {
+  //Make sure that the words are in lowercase, split the string in words, put them in a array.
+  var array = str.toLowerCase().split(' ');
+  //for every word in the array, find the first letter, capitalize it. Put the rest of the word after the capitalized word.
+  for (var i = 0; i < array.length; i++) {
+    array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);  
+  }
+  //Turn the array back to a single string.
+  var capitalizedStr = '';
+  capitalizedStr = array.join(' ');
+  return capitalizedStr;
+}
+
+titleCase("I'm a little tea pot");
