@@ -1,0 +1,16 @@
+
+function truncateString(str, num) {
+  
+  //If num is less or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.
+  if (num <= 3) {
+    str = str.slice(0, num) + "...";
+   }
+  // Truncate a str if it is longer than the given maximum string length, num.
+  //Return the truncated string with a ... ending.
+   else if (str.length > num) {
+    str = str.slice(0, num-3) + '...';
+  } 
+  return str;
+}
+
+truncateString("Absolutely Longer", 2);
