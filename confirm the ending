@@ -1,0 +1,15 @@
+function confirmEnding(str, target) {
+  //Check to see if the last letter or the word in str is the same as target.
+  
+ for (var i = 0; i < str.length; i++) {
+   if (str.substr(-target.length) == target) {
+     return true;
+   } else {
+     return false;
+   }
+   
+ }
+  
+}
+
+confirmEnding("Bastian", "n");
