@@ -1,0 +1,18 @@
+function mutation(arr) {
+  //Return true if all the letters in the second array are in the first element of the array.
+  //Turn all letters in array to lowercase
+  var target = arr[0].toLowerCase();
+  var test = arr[1].toLowerCase();
+  
+  //For each letter in arr[1], look to see if it is also in arr[0]. If it is, add 1 to count. If the count and the letters in arr[1] are the same, return true. Else return false.
+  for (var i = 0; i < test.length; i++) {
+    if (target.indexOf(test[i]) < 0) {
+      return false;
+    }
+  
+    } 
+  
+  return true;
+}
+
+mutation(["hello", "hey"]);
