@@ -1,0 +1,8 @@
+function slasher(arr, howMany) {
+  // Splice howMany elements from the head of the array, return the remaining elements in array.
+  arr.splice(0, howMany);
+  
+  return arr;
+}
+
+slasher([1, 2, 3], 2);
