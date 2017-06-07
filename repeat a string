@@ -1,0 +1,11 @@
+//If the num is a positive number, repeat and return the string num times.
+function repeatStringNumTimes(str, num) {
+  if (num > 0) {
+    return str.repeat(num);
+    //If num is a negative number, return an empty string.
+  } else {
+    return (str = '');
+  } 
+}
+
+repeatStringNumTimes("abc", 8);
