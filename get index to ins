@@ -1,0 +1,18 @@
+function getIndexToIns(arr, num) {
+  
+  //Push num to arr.
+  arr.push(num);
+  
+  //Make a function to help compare numbers.
+  function compareNumbers(a, b) {
+    return a - b;
+  }
+  //Sort arr with compareNumbers. 
+  arr.sort(compareNumbers);
+  
+  //Return index of num.
+  
+  return arr.indexOf(num);
+}
+
+getIndexToIns([40, 60], 50);
