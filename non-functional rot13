@@ -1,0 +1,33 @@
+
+function rot13(str) { // LBH QVQ VG!
+  //All letters to uppercase.
+  str = str.toUpperCase();
+  //New string to hold the decoded letters. 
+  var newStr = "";
+  //Change the letters to Unicode values. Beware of dots and punctuation.
+  var isThisALetter = str.search(/[A-Z]/i);
+  var c;
+  
+ for (i = 0; i < str.length; i++) {
+   if (isThisALetter != -1)  {
+     //Turn the letter to a number. If the letter is A-M: + 13. If the letter is N-Z: - 13.
+    c = str.charCodeAt(i);
+     if (c >= 65 && c >= 77) {
+       c = c + 13;
+     } else if (c >= 78 && c <= 90) {
+       c = c - 13;
+       //If it's not a letter, put it directly into newStr.
+     } 
+     newStr += String.fromCharCode(c);
+     } //else { 
+       //newStr = newStr += i;
+     //Turn the numbers back to a letter and insert in newStr.
+  //}
+ }   
+  
+  //Return the new string.
+  return newStr;
+}
+
+// Change the inputs below to test
+rot13("SERR ddqR PNZC");
